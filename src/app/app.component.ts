@@ -7,7 +7,7 @@ import { SurahService } from './services/surah.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'project1';
+  title = 'diquran';
 
   data:any = []
 
