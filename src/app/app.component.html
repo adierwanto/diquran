@@ -1,79 +1,16 @@
-<div class="container" style="background-color: aliceblue;">
-  <!-- Just an image -->
-  <nav class="navbar navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img
-        src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png"
-        height="30"
-        alt=""
-        loading="lazy"
-        />
-      </a>
-    </div>
-  </nav>
-  
-  <header>
+<div class="container">
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      <span class="fs-4">Diquran</span>
+    </a>
+
+    <ul class="nav">
+      <li class="nav-item"><a routerLink="/" routerLinkActive="active" class="nav-link">Home</a></li>
+      <li class="nav-item"><a routerLink="/about" routerLinkActive="active" class="nav-link">About</a></li>
+    </ul>
     
-    <!-- Background image -->
-    <div
-    class="p-5 text-center bg-image"
-    style="
-    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg');
-    height: 400px;
-    "
-    >
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-      <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="text-white">
-          <h1 class="mb-3">Project X</h1>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Background image -->
-</header>
-
-<h1 class="text-center my-5">Surah</h1>
-
-<div class="row">
-  <div class="col-md-4" *ngFor="let item of data.data; let i = index">
-    <div class="card my-2">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-2">
-            <p class="badge rounded-pill bg-success text-start">{{i+1}}</p>
-          </div>
-          <div class="col-6">
-            <h6 class="card-title pl-5">{{item.name.transliteration.id}} ({{item.numberOfVerses}})</h6>
-            <p class="card-text" style="font-size:13px"><i>{{item.name.translation.id}}</i></p>
-          </div>
-          <div class="col-4">
-            <h3 class="card-title text-end"><b>{{item.name.short}}</b></h3>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </div>
+  </header>
 </div>
 
-
-
-
-<!-- <table class="table align-middle">
-  <thead>
-    <tr>
-      <th scope="col">Lorem</th>
-      <th scope="col">Ipsum</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of data.data">
-      <td>
-        {{item.name.short}}
-      </td>
-    </tr>
-    
-  </tbody>
-</table> -->
+<router-outlet></router-outlet>

@@ -7,13 +7,6 @@ import { SurahService } from './services/surah.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'diquran';
 
-  data:any = []
-
-  constructor(private surah: SurahService) {
-    this.surah.getData().subscribe(data=>{
-      this.data=data
-    })
-  }
+  constructor() { }
 }

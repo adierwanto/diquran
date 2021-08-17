@@ -1,0 +1,43 @@
+<!-- Background image -->
+<div
+class="p-5 text-center bg-image"
+style="
+  background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg');
+  height: 400px;
+"
+>
+<div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+  <div class="d-flex justify-content-center align-items-center h-100">
+    <div class="text-white">
+      <h1 class="mb-3">Heading</h1>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Background image -->
+
+<div class="container">
+
+  
+  <div class="row">
+  <h1 class="text-center my-5">Surah</h1>
+  <div class="col-md-4" *ngFor="let item of data.data; let i = index">
+    <div class="card my-2">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-2">
+            <p class="badge rounded-pill bg-success text-start">{{i+1}}</p>
+          </div>
+          <div class="col-6">
+            <h6 class="card-title pl-5">{{item.name.transliteration.id}} ({{item.numberOfVerses}})</h6>
+            <p class="card-text" style="font-size:13px"><i>{{item.name.translation.id}}</i></p>
+          </div>
+          <div class="col-4">
+            <h3 class="card-title text-end"><b>{{item.name.short}}</b></h3>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
