@@ -22,7 +22,7 @@ style="
   <div class="row">
   <h1 class="text-center my-5">Surah</h1>
   <div class="col-md-4" *ngFor="let item of data.data; let i = index">
-    <div class="card my-2">
+    <div class="card my-2" [routerLink]="['/surah', item.number]" routerLinkActive="router-link-active" >
       <div class="card-body">
         <div class="row">
           <div class="col-2">

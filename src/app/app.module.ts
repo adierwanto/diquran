@@ -22,12 +22,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { ProfileComponent } from './components/profile/profile.component';
 import { HomeComponent } from './components/home/home.component';
+import { DetailSurahComponent } from './components/detail-surah/detail-surah.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     HomeComponent,
+    DetailSurahComponent,
   ],
   imports: [
     BrowserModule,
