@@ -1,1 +1,52 @@
-<p>{{id}}</p>
+
+<!-- Background image -->
+<div
+class="p-5 text-center bg-image"
+style="
+  background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg');
+  height: 400px;
+"
+>
+<div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+  <div class="d-flex justify-content-center align-items-center h-100">
+    <div class="text-white">
+        <h3>{{data.data.name.short}}</h3>
+      <h1 class="mb-3">{{data.data.name.transliteration.id}}</h1>
+      <i>{{data.data.name.translation.id}}</i>
+      <hr>
+      {{data.data.revelation.id}} - {{data.data.numberOfVerses}} Ayat
+    </div>
+  </div>
+</div>
+</div>
+<!-- Background image -->
+
+<div class="container mt-3">
+<div class="row">
+    <div class="col-md-12 center">
+        <div class="card my-4" *ngFor="let verse of data.data.verses; let i = index">
+            <div class="card-header bg-dark text-white">
+                <div class="row">
+                    <div class="col-6">
+                        {{i+1}}
+                    </div>
+                    <div class="col-6 text-end">
+                        <button type="button" class="btn btn-light btn-rounded"><i class="fas fa-clipboard"></i> Tafsir</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="text-end">
+                    <h3><b>{{verse.text.arab}}</b></h3>
+                    <i>{{verse.text.transliteration.en}}</i>
+                </div>
+                <hr>
+                <div>
+                    <i>"{{verse.translation.id}}"</i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -12,4 +12,9 @@ export class SurahService {
     let url="https://api.quran.sutanlab.id/surah";
     return this.http.get(url);
   }
+
+  getDetail(id: number) {
+    let url=`https://api.quran.sutanlab.id/surah/${id}`;
+    return this.http.get(url);
+  }
 }
