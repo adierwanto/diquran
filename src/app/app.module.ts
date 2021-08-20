@@ -23,6 +23,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ProfileComponent } from './components/profile/profile.component';
 import { HomeComponent } from './components/home/home.component';
 import { DetailSurahComponent } from './components/detail-surah/detail-surah.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { DetailSurahComponent } from './components/detail-surah/detail-surah.com
     ProfileComponent,
     HomeComponent,
     DetailSurahComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
