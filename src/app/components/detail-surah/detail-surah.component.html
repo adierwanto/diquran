@@ -3,7 +3,7 @@
 <div
 class="p-5 text-center bg-image"
 style="
-  background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg');
+  background-image: url('https://images.unsplash.com/photo-1542816417-0983c9c9ad53?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cXVyYW58ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80');
   height: 400px;
 "
 >
@@ -27,12 +27,15 @@ style="
         <div class="card my-4" *ngFor="let verse of data.data.verses; let i = index">
             <div class="card-header bg-dark text-white">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-3">
                         {{i+1}}
                     </div>
-                    <div class="col-6 text-end">
+                    <div class="col-9 text-end">
+                        <!-- <audio controls>
+                            <source src="{{verse.audio.primary}}" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                          </audio> -->
                         <button type="button" class="btn btn-light btn-rounded" (click)="openModal(verse.tafsir.id)"><i class="fas fa-clipboard"></i> Tafsir</button>
-
                     </div>
                 </div>
             </div>

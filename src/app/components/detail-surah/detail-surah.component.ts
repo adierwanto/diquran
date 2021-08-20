@@ -29,7 +29,7 @@ export class DetailSurahComponent implements OnInit {
   }
 
   openModal(id: any) {
-    this.modalRef = this.modalService.open(ModalComponent, {data: {body: id}, modalClass: 'modal-dialog-centered modal-xl'});
+    this.modalRef = this.modalService.open(ModalComponent, {data: {body: id}, modalClass: 'modal-dialog-centered modal-xl modal-dialog-scrollable'});
   }
 
 }
