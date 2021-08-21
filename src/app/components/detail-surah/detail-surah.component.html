@@ -31,11 +31,12 @@ style="
                         {{i+1}}
                     </div>
                     <div class="col-9 text-end">
-                        <!-- <audio controls>
+                        <audio #myAudio>
                             <source src="{{verse.audio.primary}}" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                          </audio> -->
-                        <button type="button" class="btn btn-light btn-rounded" (click)="openModal(verse.tafsir.id)"><i class="fas fa-clipboard"></i> Tafsir</button>
+                          </audio>
+                          <button type="button" class="btn btn-light btn-rounded mx-1" (click)="myAudio.play()"><i class="fas fa-play"></i> Play</button>
+                          <!-- <button type="button" class="btn btn-light btn-rounded mx-1" (click)="myAudio.pause()"><i class="fas fa-pause"></i> Pause</button> -->
+                        <button type="button" class="btn btn-light btn-rounded mx-1" (click)="openModal(verse.tafsir.id)"><i class="fas fa-clipboard"></i> Tafsir</button>
                     </div>
                 </div>
             </div>
