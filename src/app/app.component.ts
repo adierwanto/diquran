@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SurahService } from './services/surah.service';
+import { LoaderService } from './services/loader.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,5 @@ import { SurahService } from './services/surah.service';
 })
 export class AppComponent {
 
-  constructor() { }
+  constructor(public loaderService: LoaderService) { }
 }
