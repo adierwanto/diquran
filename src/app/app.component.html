@@ -1,12 +1,15 @@
-<div class="progress" style="position: fixed; width: 100%; z-index: 99;" *ngIf="loaderService.isLoading | async">
-  <div
-    class="progress-bar progress-bar-striped progress-bar-animated"
-    role="progressbar"
-    style="width: 100%"
-    aria-valuemin="0"
-    aria-valuemax="100"
-  ></div>
+<div style="position: fixed; width: 100%; z-index: 99;" *ngIf="loaderService.isLoading | async">
+  <div class="progress">
+    <div
+      class="progress-bar progress-bar-striped progress-bar-animated"
+      role="progressbar"
+      style="width: 100%"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    ></div>
+  </div>
 </div>
+
 
 <!-- <div class="spinner-border" role="status" *ngIf="loaderService.isLoading | async">
   <span class="visually-hidden">Loading...</span>
@@ -14,7 +17,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <img routerLink="/" src="assets/diquran.png" alt="" srcset="" height="55px">
+    <img routerLink="/" src="assets/logo.png" alt="" srcset="" height="55px">
     <!-- <a class="navbar-brand" routerLink="/">DIQURAN</a> -->
     <button
       class="navbar-toggler"
