@@ -32,4 +32,46 @@ export class DetailSurahComponent implements OnInit {
     this.modalRef = this.modalService.open(ModalComponent, {data: {body: id}, modalClass: 'modal-dialog-centered modal-xl modal-dialog-scrollable'});
   }
 
+
+  playAudio(myAudio: any, faPlay: any, faPause: any, btnPlay: any) {
+        const theAudio   = <HTMLMediaElement>document.getElementById(myAudio)!
+        const btn       = document.getElementById(btnPlay)!
+        const playIcon  = document.getElementById(faPlay)!
+        const pauseIcon = document.getElementById(faPause)!
+        const dataPlay  = btn.getAttribute('playing')
+
+        if(dataPlay === 'false')
+        {
+            btn.setAttribute('playing', 'true')
+            const playingAudio = theAudio.play()
+
+            if(playingAudio !== undefined)
+            {
+                playingAudio.then(() =>
+                {
+                    playIcon.style.display = 'none'
+                    pauseIcon.style.display = 'inline-block'
+                }).catch((error) => 
+                {
+                    console.log(error)
+                })
+            }
+        }
+        else
+        {
+            btn.setAttribute('playing', 'false')
+            theAudio.pause()
+            playIcon.style.display = 'inline-block'
+            pauseIcon.style.display = 'none'
+        }
+
+        theAudio.onpause = () =>
+        {
+            btn.setAttribute('playing', 'false')
+            theAudio.pause()
+            playIcon.style.display = 'inline-block'
+            pauseIcon.style.display = 'none'
+        }
+  }
+
 }

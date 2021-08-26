@@ -31,11 +31,10 @@ style="
                         {{i+1}}
                     </div>
                     <div class="col-9 text-end">
-                        <audio #myAudio>
+                        <audio id="{{'myAudio' + verse.number.inQuran}}">
                             <source src="{{verse.audio.primary}}" type="audio/mpeg">
                           </audio>
-                          <button type="button" class="btn btn-light btn-rounded mx-1" (click)="myAudio.play()"><i class="fas fa-play"></i> Play</button>
-                          <!-- <button type="button" class="btn btn-light btn-rounded mx-1" (click)="myAudio.pause()"><i class="fas fa-pause"></i> Pause</button> -->
+                          <button type="button" id="{{'btnPlay' + verse.number.inQuran}}" class="btn btn-light btn-rounded mx-1" (click)="playAudio('myAudio' + verse.number.inQuran, 'fa-play' + verse.number.inQuran, 'fa-pause' + verse.number.inQuran, 'btnPlay' + verse.number.inQuran)" playing="false"><i class="fas fa-play" id="{{'fa-play' + verse.number.inQuran}}"></i><i class="fas fa-pause" id="{{'fa-pause' + verse.number.inQuran}}" style="display: none;"></i></button>
                         <button type="button" class="btn btn-light btn-rounded mx-1" (click)="openModal(verse.tafsir.id)"><i class="fas fa-clipboard"></i> Tafsir</button>
                     </div>
                 </div>
