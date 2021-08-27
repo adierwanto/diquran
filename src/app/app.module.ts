@@ -25,6 +25,8 @@ import { HomeComponent } from './components/home/home.component';
 import { DetailSurahComponent } from './components/detail-surah/detail-surah.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { InterceptorService } from './services/interceptor.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,12 @@ import { InterceptorService } from './services/interceptor.service';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS, useClass:InterceptorService, multi: true}
